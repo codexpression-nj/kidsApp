@@ -1,11 +1,14 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import Background from './Background';
 
 // create a component
 const Landing = ({navigation}) => {
     return (
-        <View style={styles.container}>
+        <>
+         <View style={styles.container}>
+            
             {/* <Text>landing</Text> */}
             <TouchableOpacity 
                 style={styles.button}
@@ -13,7 +16,15 @@ const Landing = ({navigation}) => {
                 >
                 <Text style={{color:'white'}}>Get Started </Text>
             </TouchableOpacity>
+            <View >
+           
         </View>
+        <Image style={styles.img} source={require('../assets/grass.png')}/>
+
+{/* <Background ></Background> */}
+</View>
+        </>
+       
     );
 };
 
@@ -33,6 +44,12 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center'
 
+    },
+    img:{
+        width: '100%',
+        height: 210,
+        bottom:0,
+        position:'absolute'
     }
 });
 
