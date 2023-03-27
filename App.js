@@ -13,7 +13,7 @@ export default function App() {
   return (
     <NavigationContainer >
     <Stack.Navigator initialRouteName='Landing'>
-      <Stack.Screen name="Landing" component={Landing} />
+      <Stack.Screen name="Landing" component={Landing} options={{headerShown:false}}/>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Background" component={Background} />
     </Stack.Navigator>
