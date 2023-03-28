@@ -7,7 +7,13 @@ const Home = () => {
     return (
         <View style={styles.container}>
             <Text>Home</Text>
-        </View>
+            <View style={styles.card}>
+
+            </View>
+            <View style={styles.card}>
+
+</View>
+        </View> 
     );
 };
 
@@ -17,8 +23,14 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: 'white',
     },
+    card:{
+        width:'90%',
+        height: 90,
+        backgroundColor: 'pink',
+        margin:10
+    }
 });
 
 //make this component available to the app
