@@ -1,21 +1,22 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, FlatList, Image } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity } from 'react-native';
 import { animalData } from '../services/data';
 
 // create a component
 const AnimalItem = ({data}) => (
    
-    <View style={styles.item}>
+    <TouchableOpacity style={[styles.card, {backgroundColor:data.backgroundColor}]}>
       <Text style={styles.title}>{data.name}</Text>
       <Image style={styles.image} source={data.image}/>
-    </View>
+    </TouchableOpacity>
   );
   
 const Home = () => {
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
+                style={{width:'100%'}}
                 data={animalData}
                 renderItem ={
                     // console.log();
@@ -33,16 +34,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
+        // width: 100,
     },
     card:{
-        width:'90%',
+        // width:'40%',
         height: 90,
-        backgroundColor: 'pink',
-        margin:10
+        margin:10,
+        padding:10,
+        borderRadius: 16,
     },
     image:{
-        height: 40,
-        width: 90,
+        height: 100,
+        width: 100,
+        resizeMode:'contain'
     }
 });
 

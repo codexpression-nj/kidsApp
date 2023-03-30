@@ -6,7 +6,9 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Herbivore",
                                 "habitat": "Rivers and lakes in Africa",
-                                "average_lifespan": "40-50 years"
+                                "average_lifespan": "40-50 years",
+                                "backgroundColor":"#BAB6CE"
+
                               },
                               {
                                 "name": "Giraffe",
@@ -15,7 +17,8 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Herbivore",
                                 "habitat": "Savannas in Africa",
-                                "average_lifespan": "25 years"
+                                "average_lifespan": "25 years",
+                                "backgrondColor":"#B07458"
                               },
                               {
                                 "name": "Zebra",
@@ -24,16 +27,19 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Herbivore",
                                 "habitat": "Grasslands and savannas in Africa",
-                                "average_lifespan": "20-25 years"
+                                "average_lifespan": "20-25 years",
+                                "backgroundColor":"#9C9796"
+
                               },
                               {
                                 "name": "Tiger",
-                                "image": require("../assets/animals/zebra.png"),
+                                "image": require("../assets/animals/tiger.png"),
                                 "description": "Tigers are large, carnivorous cats that live in forests and grasslands in Asia. They are known for their distinctive orange coats with black stripes and are one of the most recognizable animals in the world. Tigers are solitary animals and are known for their strength and agility.",
                                 "class": "Mammal",
                                 "diet": "Carnivore",
                                 "habitat": "Forests and grasslands in Asia",
-                                "average_lifespan": "8-10 years"
+                                "average_lifespan": "8-10 years",
+                                "backgroundColor":"#B37D3E"
                               }, {
                                 "name": "Lion",
                                 "image": require("../assets/animals/lion.png"),
@@ -41,7 +47,8 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Carnivore",
                                 "habitat": "Savannas and grasslands in Africa",
-                                "average_lifespan": "10-14 years"
+                                "average_lifespan": "10-14 years",
+                                "backgroundColor":"#D37E41"
                               },
                               {
                                 "name": "Elephant",
@@ -50,7 +57,8 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Herbivore",
                                 "habitat": "Savannas, forests and deserts in Africa and Asia",
-                                "average_lifespan": "60-70 years"
+                                "average_lifespan": "60-70 years",
+                                "backgroundColor":"#47555D"
                               },
                               {
                                 "name": "Rhinoceros",
@@ -59,7 +67,9 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Herbivore",
                                 "habitat": "Grasslands and forests in Africa and Asia",
-                                "average_lifespan": "35-50 years"
+                                "average_lifespan": "35-50 years",
+                                "backgroundColor":"#ECE7CC",
+
                             },
                            
                             {
@@ -69,7 +79,8 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Herbivore",
                                 "habitat": "Grasslands and meadows",
-                                "average_lifespan": "25-30 years"
+                                "average_lifespan": "25-30 years",
+                                "backgroundColor":"#FBCE6F"
                             },
                             {
                                 "name": "Monkey",
@@ -78,7 +89,8 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Omnivore",
                                 "habitat": "Forests, grasslands, and deserts",
-                                "average_lifespan": "20-40 years"
+                                "average_lifespan": "20-40 years",
+                                "backgroundColor":"#FFC59D"
                             },
                             {
                                 "name": "Deer",
@@ -87,5 +99,6 @@ export const animalData = [
                                 "class": "Mammal",
                                 "diet": "Herbivore",
                                 "habitat": "Forests, grasslands, and mountains",
-                                "average_lifespan": "4-12 years"
+                                "average_lifespan": "4-12 years",
+                                "backgroundColor":"#612A07"
                             }]
