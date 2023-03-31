@@ -7,9 +7,21 @@ export const animalData = [
                                 "diet": "Herbivore",
                                 "habitat": "Rivers and lakes in Africa",
                                 "average_lifespan": "40-50 years",
-                                "backgroundColor":"#BAB6CE"
-
+                                "backgroundColor":"#BAB6CE",
+                                "id" :1
                               },
+                                    {
+                                "name": "Monkey",
+                                "image": require("../assets/animals/monkey.png"),
+                                "description": "Monkeys are a type of primate found all over the world, in a variety of habitats. There are over 250 different species of monkeys, each with its own unique appearance and behavior. Monkeys are known for their intelligence, social nature, and dexterity. They are omnivores, meaning they eat both plants and animals.",
+                                "class": "Mammal",
+                                "diet": "Omnivore",
+                                "habitat": "Forests, grasslands, and deserts",
+                                "average_lifespan": "20-40 years",
+                                "backgroundColor":"#F8A66C",
+                                "id" :9
+
+                            },
                               {
                                 "name": "Giraffe",
                                 "image": require("../assets/animals/giraff.png"),
@@ -18,7 +30,9 @@ export const animalData = [
                                 "diet": "Herbivore",
                                 "habitat": "Savannas in Africa",
                                 "average_lifespan": "25 years",
-                                "backgrondColor":"#B07458"
+                                "backgroundColor":"#FFDD84",
+                                "id" :2
+
                               },
                               {
                                 "name": "Zebra",
@@ -28,7 +42,9 @@ export const animalData = [
                                 "diet": "Herbivore",
                                 "habitat": "Grasslands and savannas in Africa",
                                 "average_lifespan": "20-25 years",
-                                "backgroundColor":"#9C9796"
+                                "backgroundColor":"#C3C4C4",
+                                "id" :3
+
 
                               },
                               {
@@ -39,7 +55,9 @@ export const animalData = [
                                 "diet": "Carnivore",
                                 "habitat": "Forests and grasslands in Asia",
                                 "average_lifespan": "8-10 years",
-                                "backgroundColor":"#B37D3E"
+                                "backgroundColor":"#FFC916",
+                                "id" :4
+
                               }, {
                                 "name": "Lion",
                                 "image": require("../assets/animals/lion.png"),
@@ -48,7 +66,9 @@ export const animalData = [
                                 "diet": "Carnivore",
                                 "habitat": "Savannas and grasslands in Africa",
                                 "average_lifespan": "10-14 years",
-                                "backgroundColor":"#D37E41"
+                                "backgroundColor":"#E3CAA7",
+                                "id" :5
+
                               },
                               {
                                 "name": "Elephant",
@@ -58,7 +78,9 @@ export const animalData = [
                                 "diet": "Herbivore",
                                 "habitat": "Savannas, forests and deserts in Africa and Asia",
                                 "average_lifespan": "60-70 years",
-                                "backgroundColor":"#47555D"
+                                "backgroundColor":"#C7D8E0",
+                                "id" :6
+
                               },
                               {
                                 "name": "Rhinoceros",
@@ -69,6 +91,8 @@ export const animalData = [
                                 "habitat": "Grasslands and forests in Africa and Asia",
                                 "average_lifespan": "35-50 years",
                                 "backgroundColor":"#ECE7CC",
+                                "id" :7
+
 
                             },
                            
@@ -80,18 +104,11 @@ export const animalData = [
                                 "diet": "Herbivore",
                                 "habitat": "Grasslands and meadows",
                                 "average_lifespan": "25-30 years",
-                                "backgroundColor":"#FBCE6F"
+                                "backgroundColor":"#FBCE6F",
+                                "id" :8
+
                             },
-                            {
-                                "name": "Monkey",
-                                "image": require("../assets/animals/monkey.png"),
-                                "description": "Monkeys are a type of primate found all over the world, in a variety of habitats. There are over 250 different species of monkeys, each with its own unique appearance and behavior. Monkeys are known for their intelligence, social nature, and dexterity. They are omnivores, meaning they eat both plants and animals.",
-                                "class": "Mammal",
-                                "diet": "Omnivore",
-                                "habitat": "Forests, grasslands, and deserts",
-                                "average_lifespan": "20-40 years",
-                                "backgroundColor":"#FFC59D"
-                            },
+                      
                             {
                                 "name": "Deer",
                                 "image": require("../assets/animals/deer.png"),
@@ -100,5 +117,8 @@ export const animalData = [
                                 "diet": "Herbivore",
                                 "habitat": "Forests, grasslands, and mountains",
                                 "average_lifespan": "4-12 years",
-                                "backgroundColor":"#612A07"
-                            }]
+                                "backgroundColor":"#F2CD9C",
+                                "id" :10
+
+                            }
+                          ]

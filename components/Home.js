@@ -37,16 +37,32 @@ const styles = StyleSheet.create({
         // width: 100,
     },
     card:{
-        // width:'40%',
-        height: 90,
-        margin:10,
-        padding:10,
-        borderRadius: 16,
+        width:'85%',
+        height: 100,
+        margin:14,
+        // padding:12,
+        borderRadius: 26,
+        alignSelf:'center'
     },
     image:{
         height: 100,
         width: 100,
-        resizeMode:'contain'
+        resizeMode:'contain',
+        position: 'absolute',
+        top: -23,
+        // left: '-10%',
+        // marginLeft: -30,
+    },
+    title:{
+        alignSelf:'flex-end',
+        fontSize:30,
+        fontWeight:'bold',
+        color:'white',
+        textDecorationStyle:'solid',
+        textShadowColor:'black',
+        textShadowRadius:5,
+        margin:16
+        
     }
 });
 
