@@ -32,7 +32,7 @@ export const animalData = [
                                 "average_lifespan": "25 years",
                                 "backgroundColor":"#FFDD84",
                                 "id" :2
-
+                                  
                               },
                               {
                                 "name": "Zebra",

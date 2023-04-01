@@ -4,23 +4,34 @@ import { View, Text, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity
 import { animalData } from '../services/data';
 
 // create a component
-const AnimalItem = ({data}) => (
+const AnimalItem = ({data,onPress}) => (
    
-    <TouchableOpacity style={[styles.card, {backgroundColor:data.backgroundColor}]}>
+    <TouchableOpacity
+    onPress={ onPress}
+     style={[styles.card, {backgroundColor:data.backgroundColor}]}>
       <Text style={styles.title}>{data.name}</Text>
       <Image style={styles.image} source={data.image}/>
     </TouchableOpacity>
   );
+
   
-const Home = () => {
+  
+const Home = ({navigation}) => {
     return (
         <SafeAreaView style={styles.container}>
+            <View style={styles.header}>
+
+            </View>
             <FlatList
                 style={{width:'100%'}}
                 data={animalData}
                 renderItem ={
                     // console.log();
-                    ({item}) => <AnimalItem data={item} />}
+                    ({item}) => <AnimalItem data={item} 
+                    onPress={() => navigation.navigate("Details", { itemId: item.id })}
+                    />
+                }
+                    
                 keyExtractor={item => item.id}
             />
         </SafeAreaView> 
@@ -62,6 +73,8 @@ const styles = StyleSheet.create({
         textShadowColor:'black',
         textShadowRadius:5,
         margin:16
+    },
+    header:{
         
     }
 });
