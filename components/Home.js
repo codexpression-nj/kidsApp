@@ -20,7 +20,6 @@ const Home = ({navigation}) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
-
             </View>
             <FlatList
                 style={{width:'100%'}}

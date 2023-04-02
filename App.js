@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './components/Home';
 import Background from './components/Background';
 import Details from './components/Details';
+import Register from './components/Register';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,8 +16,9 @@ export default function App() {
     <NavigationContainer >
     <Stack.Navigator initialRouteName='Landing'>
       <Stack.Screen name="Landing" component={Landing} options={{headerShown:false}}/>
+      <Stack.Screen name="Register" component={Register} options={{headerShown:false}}/>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Details" component={Details} />
+      <Stack.Screen name="Details" component={Details} options={{headerShown:false}}/>
       <Stack.Screen name="Background" component={Background} />
     </Stack.Navigator>
   </NavigationContainer>

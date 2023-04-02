@@ -4,30 +4,34 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, TextInput } from 'reac
 import Background from './Background';
 
 // create a component
-const Landing = ({navigation}) => {
+const Landing = ({ navigation }) => {
     return (
         <>
-         <View style={styles.container}>
-            
-            {/* <Text>landing</Text> */}
-            <TextInput style={styles.input} placeholder='username'></TextInput>
-            <TextInput style={styles.input} placeholder='password'></TextInput>
-            <TouchableOpacity 
-                style={styles.button}
-                onPress={() => navigation.navigate('Home')}
+            <View style={styles.container}>
+                <TextInput style={styles.input} placeholder='username'></TextInput>
+                <TextInput style={styles.input} placeholder='password'></TextInput>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('Home')}
                 >
-                <Text style={{color:'white'}}>Get Started </Text>
-            </TouchableOpacity>
-            <View >
-           
-        </View>
-        <Image style={styles.image} source={require('../assets/boy.png')}/>
-        <Image style={styles.img} source={require('../assets/grass.png')}/>
+                    <Text style={{ color: 'white' }}>Get Started </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
 
-{/* <Background ></Background> */}
-</View>
+                    onPress={() => navigation.navigate('Register')}
+                >
+                    <Text style={{ color: '#45A46A' }}>Register</Text>
+                </TouchableOpacity>
+                <View >
+
+                </View>
+                <Image style={styles.image} source={require('../assets/boy.png')} />
+                <Image style={styles.img} source={require('../assets/grass.png')} />
+
+                {/* <Background ></Background> */}
+            </View>
         </>
-       
+
     );
 };
 
@@ -39,35 +43,38 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'white',
     },
-    button:{
-        backgroundColor:'#45A46A',
+    button: {
+        backgroundColor: '#45A46A',
         width: 300,
-        height:40,
-        borderRadius:20,
-        alignItems:'center',
-        justifyContent:'center',
+        height: 40,
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
-    img:{
+    img: {
         width: '100%',
         height: 210,
-        bottom:0,
-        position:'absolute'
+        bottom: 0,
+        position: 'absolute'
     },
-    image:{
+    image: {
         width: 200,
         height: 200,
-        resizeMode:'contain',
-        bottom:10,
-        position:'absolute'
+        resizeMode: 'contain',
+        bottom: 10,
+        position: 'absolute'
     },
-    input:{
-        borderRadius:20,
-        borderWidth:1,
-        borderColor:'#dedede',
+    input: {
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: '#dedede',
         width: 300,
-        height:50,
-        padding:16,
-        margin:10
+        height: 50,
+        padding: 16,
+        margin: 10
+    },
+    signUpButton: {
+
     }
 });
 
