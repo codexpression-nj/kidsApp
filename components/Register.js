@@ -6,6 +6,8 @@ import {View, Text, StyleSheet, TouchableOpacity, Image, TextInput} from 'react-
 const Register = ({navigation}) => {
     return (
         <View style={styles.container}>
+         <Image style={styles.logo} source={require('../assets/logo.png')}/>
+         <Text style={styles.title}>Create A Profile</Text>
         <TextInput style={styles.input} placeholder='name'></TextInput>
         <TextInput style={styles.input} placeholder='age'></TextInput>
         <TextInput style={styles.input} placeholder='username'></TextInput>
@@ -18,7 +20,7 @@ const Register = ({navigation}) => {
         </TouchableOpacity>
         <TouchableOpacity
 
-            onPress={() => navigation.navigate('Register')}
+            onPress={() => navigation.navigate('Landing')}
         >
             <Text style={{ color: '#45A46A' }}>Login</Text>
         </TouchableOpacity>
@@ -71,6 +73,14 @@ const styles = StyleSheet.create({
         padding: 16,
         margin: 10
     },
+    logo:{
+        width:100,
+        height: 100,
+        marginTop:-200
+    },
+    title:{
+        fontWeight:'bold'
+    }
 });
 
 //make this component available to the app

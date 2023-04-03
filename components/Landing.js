@@ -8,6 +8,7 @@ const Landing = ({ navigation }) => {
     return (
         <>
             <View style={styles.container}>
+                <Image style={styles.logo} source={require('../assets/logo.png')}/>
                 <TextInput style={styles.input} placeholder='username'></TextInput>
                 <TextInput style={styles.input} placeholder='password'></TextInput>
                 <TouchableOpacity
@@ -26,7 +27,8 @@ const Landing = ({ navigation }) => {
 
                 </View>
                 <Image style={styles.image} source={require('../assets/boy.png')} />
-                <Image style={styles.img} source={require('../assets/grass.png')} />
+                {/* <Image style={styles.img} source={require('../assets/grass.png')} /> */}
+                <Image style={styles.bgImg} source={require('../assets/bgGra.png')} />
 
                 {/* <Background ></Background> */}
             </View>
@@ -61,7 +63,7 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         resizeMode: 'contain',
-        bottom: 10,
+        bottom: 0,
         position: 'absolute'
     },
     input: {
@@ -75,7 +77,19 @@ const styles = StyleSheet.create({
     },
     signUpButton: {
 
-    }
+    }, 
+    logo:{
+        width:150,
+        height: 150,
+        marginTop:-150
+    },
+    bgImg: {
+        width: '100%',
+        height: 30,
+        bottom: 0,
+        position: 'absolute',
+        // resizeMode:'contain'
+    },
 });
 
 //make this component available to the app
