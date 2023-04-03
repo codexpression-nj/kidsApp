@@ -1,11 +1,27 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import { quiz } from '../services/data';
 
+const CardItem = ({data,onPress}) => (
+    <TouchableOpacity
+    onPress={ onPress}
+     style={styles.cardLockedLEvel}>
+      <Text style={styles.title}>{data.level}</Text>
+    </TouchableOpacity>
+  );
 // create a component
 const QuizMenu = () => {
     return (
         <View style={styles.container}>
+            <FlatList 
+                data={quiz}
+                 renderItem ={
+                    ({item}) => <CardItem data={item} 
+                    onPress={() => navigation.navigate("Details", { itemId: item.id })}
+                    />
+                }
+            />
             <Image style={styles.bgImage} source={require('../assets/bgTree.png')}/>
         </View>
     );
@@ -17,19 +33,18 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        // backgroundColor: '#2c3e50',
     },
     bgImage:{
         marginTop:20,
         height: '100%',
-        // width: 30,
         resizeMode:'contain',
-        // flex:2,
-        // backgroundColor:'red',
         left:'-55%'
     },
-    card:{
+    cardLockedLEvel:{
         
+    },
+    cardUnlockedLevel:{
+
     }
 });
 

@@ -35,11 +35,7 @@ const Details = ({ route,navigation }) => {
 
             </TouchableOpacity>
             <Image style={styles.bgImg} source={require('../assets/bgGra.png')} />
-            <TouchableOpacity
-            onPress={() =>{navigation.navigate('QuizMenu')}}
-             style={[styles.btn ,{backgroundColor:item.backgroundColor}]}>
-                <Text style={styles.btnText}>Quiz</Text>
-            </TouchableOpacity>
+           
         </View>
     );
 };

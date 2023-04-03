@@ -13,7 +13,7 @@ const Landing = ({ navigation }) => {
                 <TextInput style={styles.input} placeholder='password'></TextInput>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => navigation.navigate('Menu')}
                 >
                     <Text style={{ color: 'white' }}>Get Started </Text>
                 </TouchableOpacity>

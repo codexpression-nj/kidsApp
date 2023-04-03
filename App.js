@@ -9,6 +9,7 @@ import Details from './components/Details';
 import Register from './components/Register';
 import Quiz from './components/Quiz';
 import QuizMenu from './components/QuizMenu';
+import Menu from './components/Menu';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ export default function App() {
     <Stack.Navigator initialRouteName='Landing'>
       <Stack.Screen name="Landing" component={Landing} options={{headerShown:false}}/>
       <Stack.Screen name="Register" component={Register} options={{headerShown:false}}/>
+      <Stack.Screen name="Menu" component={Menu} options={{headerShown:false}}/>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Details" component={Details} options={{headerShown:false}}/>
       <Stack.Screen name="Background" component={Background} />
