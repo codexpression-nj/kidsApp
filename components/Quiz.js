@@ -10,6 +10,8 @@ const words = [
 ];
 
 export default function Quiz() {
+  const { itemId, otherParam } = route.params;
+  
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(words[currentWordIndex].question);
   const [currentAnswer, setCurrentAnswer] = useState('');

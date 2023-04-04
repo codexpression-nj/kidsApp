@@ -113,7 +113,12 @@ export const animalData = [
 ]
 export const quiz = [
   {level : 1, quizWords:quizLevelOne,unlocked:true,id:1},
-  {level : 2, quizWords:quizLevelTwo, unlocked:false,id:2}
+  {level : 2, quizWords:quizLevelTwo, unlocked:false,id:2},
+  {level : 3, quizWords:quizLevelTwo, unlocked:false,id:3},
+  {level : 4, quizWords:quizLevelTwo, unlocked:false,id:4},
+  {level : 5, quizWords:quizLevelTwo, unlocked:false,id:5},
+  {level : 5, quizWords:quizLevelTwo, unlocked:false,id:6},
+  {level : 5, quizWords:quizLevelTwo, unlocked:false,id:7},
 ]
 export const quizLevelOne = [
   { question: 'B_N_NA', answer: 'ANANA' },

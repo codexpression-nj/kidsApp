@@ -19,8 +19,6 @@ const AnimalItem = ({data,onPress}) => (
 const Home = ({navigation}) => {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.header}>
-            </View>
             <FlatList
                 style={{width:'100%'}}
                 data={animalData}
