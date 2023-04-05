@@ -11,7 +11,7 @@ const CardItem = ({ data, onPress }) => (
     <TouchableOpacity
             onPress={onPress}
             style={styles.cardLockedLEvel}>
-            <Text style={styles.title}>{data.level}</Text>
+            <Text style={styles.title}>LEVEL {data.level}</Text>
         </TouchableOpacity>
     </View>
 );
@@ -21,7 +21,6 @@ const QuizMenu = ({navigation}) => {
         <SafeAreaView style={styles.container}>
             <View>
                 <View style={styles.bgImage}>
-                    {/* <Image style={{width: "100%",height: windowHeight/1.5,resizeMode: 'contain', left: - windowWidth/2,}} source={require('../assets/bgTree.png')} /> */}
                     <Image style={{ position: 'absolute', top: 110, resizeMode: 'contain', width: windowWidth, height: '100%', left: - windowWidth * 0.55 }} source={require('../assets/tree.png')} />
                 </View>
                 <FlatList
@@ -30,7 +29,17 @@ const QuizMenu = ({navigation}) => {
                     style={{ width: '100%', alignContent: 'center', position: 'absolute', marginTop: 30 ,flex:1,height: windowHeight,}}
                     renderItem={
                         ({ item }) => <CardItem data={item}
-                            onPress={() => navigation.navigate("Quiz", { itemId: item.id })}
+                            
+                            onPress={() => 
+                                {if(item.level ===1)
+                                    navigation.navigate("Quiz", { itemId: item.id })
+                                else{
+                                    if(item.level ===3)
+                                            navigation.navigate('Scramble',{ itemId: item.id } )
+                                    }
+                                }
+
+                            }
                         />
                     }
                 />
@@ -53,7 +62,7 @@ const styles = StyleSheet.create({
     cardLockedLEvel: {
         height: 150,
         margin: 5,
-        marginRight: 15,
+        marginRight: 20,
         width: '70%',
         alignSelf: "flex-end",
         flex: 1,
@@ -78,6 +87,9 @@ const styles = StyleSheet.create({
         // backgroundColor:''
       
       },
+      status:{
+
+      }
 });
 
 //make this component available to the app

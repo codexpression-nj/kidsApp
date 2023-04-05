@@ -111,21 +111,26 @@ export const animalData = [
     "id": 10
   }
 ]
+export const animals = [{name:"lion",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")},
+                        {name:"tiger",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")},
+                        {name:"elephant",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")},
+                        {name:"giraffe",question: 'G_IR_F',image:require("../assets/quizQ/giraffe.png")},
+                        {name:"monkey",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")}]
 export const quiz = [
-  {level : 1, quizWords:quizLevelOne,unlocked:true,id:1},
-  {level : 2, quizWords:quizLevelTwo, unlocked:false,id:2},
-  {level : 3, quizWords:quizLevelTwo, unlocked:false,id:3},
-  {level : 4, quizWords:quizLevelTwo, unlocked:false,id:4},
-  {level : 5, quizWords:quizLevelTwo, unlocked:false,id:5},
-  {level : 5, quizWords:quizLevelTwo, unlocked:false,id:6},
-  {level : 5, quizWords:quizLevelTwo, unlocked:false,id:7},
+  { level: 1, game: [{ question: 'B_N_NA', answer: 'ANANA', possibleLetters: 'ANANA', image: require("../assets/animals/deer.png") }], unlocked: true, id: 1 },
+  { level: 2, game: [{ question: 'G_IR_F', answer: 'IRAFFE', possibleLetters: 'IRAFFE', image: require("../assets/quizQ/giraffe.png") }], unlocked: false, id: 2 },
+  { level: 3, game: [{ question: 'C_T', answer: 'AT', possibleLetters: 'AT', image: require("../assets/quizQ/zebraFace.png") }], unlocked: false, id: 3 },
+  { level: 4, game: [{ question: 'H_R_E', answer: 'ORSE', possibleLetters: 'ORSE', image: require("../assets/quizQ/hippo.png") }], unlocked: true, id: 4 },
+  // {level : 5, quizWords:quizLevelTwo, unlocked:true,id:5},
+  // {level : 5, quizWords:quizLevelTwo, unlocked:false,id:6},
+  // {level : 5, quizWords:quizLevelTwo, unlocked:false,id:7},
 ]
 export const quizLevelOne = [
-  { question: 'B_N_NA', answer: 'ANANA' },
-  { question: 'G_IR_F', answer: 'IRAFFE' },
-  { question: 'C_T', answer: 'AT' },
-  { question: 'H_R_E', answer: 'ORSE' },
-  { question: 'DO_', answer: 'OG' },
+  { question: 'B_N_NA', answer: 'ANANA', possibleLetters: 'ANANA' },
+  { question: 'G_IR_F', answer: 'IRAFFE', possibleLetters: 'IRAFFE' },
+  { question: 'C_T', answer: 'AT', possibleLetters: 'AT' },
+  { question: 'H_R_E', answer: 'ORSE', possibleLetters: 'ORSE' },
+  { question: 'DO_', answer: 'OG', possibleLetters: 'OG' },
 ]
 
 export const quizLevelTwo = [

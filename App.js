@@ -10,6 +10,7 @@ import Register from './components/Register';
 import Quiz from './components/Quiz';
 import QuizMenu from './components/QuizMenu';
 import Menu from './components/Menu';
+import ScrambleWordsGame from './components/scrambleWordsGame';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
       <Stack.Screen name="Details" component={Details} options={{headerShown:false}}/>
       <Stack.Screen name="Background" component={Background} />
       <Stack.Screen name="Quiz" component={Quiz} />
+      <Stack.Screen name="Scramble" component={ScrambleWordsGame} />
       <Stack.Screen name="QuizMenu" component={QuizMenu} options={{headerShown:false}} />
     </Stack.Navigator>
   </NavigationContainer>

@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet,TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet,TextInput, Image } from 'react-native';
+import { quiz } from '../services/data';
 
-const words = [
-  { question: 'B_N_NA', answer: 'ANANA' },
-  { question: 'G_IR_F', answer: 'IRAFFE' },
-  { question: 'C_T', answer: 'AT' },
-  { question: 'H_R_E', answer: 'ORSE' },
-  { question: 'DO_', answer: 'OG' },
-];
+// const words = [
+//   { question: 'B_N_NA', answer: 'ANANA' },
+//   { question: 'G_IR_F', answer: 'IRAFFE' },
+//   { question: 'C_T', answer: 'AT' },
+//   { question: 'H_R_E', answer: 'ORSE' },
+//   { question: 'DO_', answer: 'OG' },
+// ];
 
-export default function Quiz() {
+export default function Quiz({route}) {
   const { itemId, otherParam } = route.params;
-  
+  const getGame = quiz.find(quizQuestion => quizQuestion.id === itemId)
+  const words = getGame.game
+  console.log(words)
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(words[currentWordIndex].question);
   const [currentAnswer, setCurrentAnswer] = useState('');
@@ -33,6 +36,10 @@ export default function Quiz() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.bground}>
+        <Image style={styles.image} source={words[currentWordIndex].image}/>
+      </View>
+      <Text>Hi Freind </Text>
       <Text style={styles.question}>{currentQuestion}</Text>
       <View style={styles.inputContainer}>
         <TextInput
@@ -84,4 +91,21 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: 'bold',
   },
+  bground:{
+    backgroundColor:'#A2CB7B',
+    width: 120,
+    height: 120,
+    borderRadius:50,
+    justifyContent:'center',
+    marginBottom:50
+  },
+  image:{
+    width: 130,
+    height: 130,
+    resizeMode: 'contain',
+    position: 'absolute',
+    alignSelf:'center',
+
+    // top: 50
+  }
 });
