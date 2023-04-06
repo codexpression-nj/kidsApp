@@ -111,11 +111,11 @@ export const animalData = [
     "id": 10
   }
 ]
-export const animals = [{name:"lion",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")},
-                        {name:"tiger",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")},
-                        {name:"elephant",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")},
+export const animals = [{name:"lion",question: 'L_I_',image:require("../assets/quizQ/lionFace.png")},
+                        {name:"tiger",question: 'T_GE_',image:require("../assets/quizQ/tigerFace.png")},
+                        {name:"zebra",question: 'Z_B_A',image:require("../assets/quizQ/zebraFace.png")},
                         {name:"giraffe",question: 'G_IR_F',image:require("../assets/quizQ/giraffe.png")},
-                        {name:"monkey",question: 'G_IR_F',image:require("../assets/quizQ/lionFace.png")}]
+                        {name:"monkey",question: 'M_N_E_',image:require("../assets/quizQ/monkeyFace.png")}]
 export const quiz = [
   { level: 1, game: [{ question: 'B_N_NA', answer: 'ANANA', possibleLetters: 'ANANA', image: require("../assets/animals/deer.png") }], unlocked: true, id: 1 },
   { level: 2, game: [{ question: 'G_IR_F', answer: 'IRAFFE', possibleLetters: 'IRAFFE', image: require("../assets/quizQ/giraffe.png") }], unlocked: false, id: 2 },
