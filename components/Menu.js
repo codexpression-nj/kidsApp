@@ -1,13 +1,26 @@
 //import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet, Touchable, TouchableOpacity } from 'react-native';
-
-
+import React, { Component, useRef } from 'react';
+import { View, Text, StyleSheet, Touchable, TouchableOpacity, Image } from 'react-native';
+import LottieView from 'lottie-react-native';
+import { Dimensions } from 'react-native';
 // create a component
+const windowWidth = Dimensions.get('window').width;
+
 const Menu = ({navigation}) => {
+    const animation = useRef(null);
     return (
 
         <View style={styles.container}>
+            <LottieView
+                autoPlay
+                // loop={false}
+                // duration={300}
+                ref={animation}
+                style={styles.animation}
+                speed={1}
+                // onAnimationFinish= { () => navigation.navigate('QuizMenu')}
+                source={require('../assets/monkey.json')}
+            />
             <TouchableOpacity
                     onPress={() => navigation.navigate('Home')}
                     style={[styles.btn,{backgroundColor:'#CB7DAC'}]} >
@@ -18,6 +31,8 @@ const Menu = ({navigation}) => {
                  style={[styles.btn,{backgroundColor:'#EBAF0B'}]}>
                 <Text style={styles.textBtn}> Play Activities</Text>
             </TouchableOpacity>
+            <Image style={styles.bgImg} source={require('../assets/bgGra.png')} />
+
         </View>
     );
 };
@@ -43,6 +58,20 @@ const styles = StyleSheet.create({
         color:'white',
         fontWeight:'bold',
         fontSize:20
+    },  bgImg: {
+        width: '100%',
+        height: 30,
+        bottom: 0,
+        position: 'absolute',
+        // resizeMode:'contain'
+    },
+    animation:{
+        // marginTop:-1,
+        height: 300,
+        position:"absolute",
+        top:-20,
+        width: windowWidth,
+        backgroundColor:'transparent'
     }
 });
 

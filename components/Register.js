@@ -14,7 +14,7 @@ const Register = ({navigation}) => {
         <TextInput style={styles.input} placeholder='password'></TextInput>
         <TouchableOpacity   
             style={styles.button}
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('Menu')}
         >
             <Text style={{ color: 'white' }}>Get Started </Text>
         </TouchableOpacity>
@@ -28,7 +28,7 @@ const Register = ({navigation}) => {
 
         </View>
         <Image style={styles.image} source={require('../assets/boy.png')} />
-        <Image style={styles.img} source={require('../assets/grass.png')} />
+        <Image style={styles.bgImg} source={require('../assets/bgGra.png')} />
 
         {/* <Background ></Background> */}
     </View>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         resizeMode: 'contain',
-        bottom: 10,
+        bottom: 0,
         position: 'absolute'
     },
     input: {
@@ -80,7 +80,14 @@ const styles = StyleSheet.create({
     },
     title:{
         fontWeight:'bold'
-    }
+    },
+    bgImg: {
+        width: '100%',
+        height: 30,
+        bottom: 0,
+        position: 'absolute',
+        // resizeMode:'contain'
+    },
 });
 
 //make this component available to the app
