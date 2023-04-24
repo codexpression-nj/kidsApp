@@ -4,34 +4,34 @@ import { View, Text, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity
 import { animalData } from '../services/data';
 
 // create a component
-const AnimalItem = ({data,onPress}) => (
-   
-    <TouchableOpacity
-    onPress={ onPress}
-     style={[styles.card, {backgroundColor:data.backgroundColor}]}>
-      <Text style={styles.title}>{data.name}</Text>
-      <Image style={styles.image} source={data.image}/>
-    </TouchableOpacity>
-  );
+const AnimalItem = ({ data, onPress }) => (
 
-  
-  
-const Home = ({navigation}) => {
+    <TouchableOpacity
+        onPress={onPress}
+        style={[styles.card, { backgroundColor: data.backgroundColor }]}>
+        <Text style={styles.title}>{data.name}</Text>
+        <Image style={styles.image} source={data.image} />
+    </TouchableOpacity>
+);
+
+
+
+const Home = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
-                style={{width:'100%'}}
+                style={{ width: '100%' }}
                 data={animalData}
-                renderItem ={
+                renderItem={
                     // console.log();
-                    ({item}) => <AnimalItem data={item} 
-                    onPress={() => navigation.navigate("Details", { itemId: item.id })}
+                    ({ item }) => <AnimalItem data={item}
+                        onPress={() => navigation.navigate("Details", { itemId: item.id })}
                     />
                 }
-                    
+
                 keyExtractor={item => item.id}
             />
-        </SafeAreaView> 
+        </SafeAreaView>
     );
 };
 
@@ -44,35 +44,35 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         // width: 100,
     },
-    card:{
-        width:'85%',
+    card: {
+        width: '85%',
         height: 100,
-        margin:14,
+        margin: 14,
         // padding:12,
         borderRadius: 26,
-        alignSelf:'center'
+        alignSelf: 'center'
     },
-    image:{
+    image: {
         height: 100,
         width: 100,
-        resizeMode:'contain',
+        resizeMode: 'contain',
         position: 'absolute',
         top: -23,
         // left: '-10%',
         // marginLeft: -30,
     },
-    title:{
-        alignSelf:'flex-end',
-        fontSize:30,
-        fontWeight:'bold',
-        color:'white',
-        textDecorationStyle:'solid',
-        textShadowColor:'black',
-        textShadowRadius:5,
-        margin:16
+    title: {
+        alignSelf: 'flex-end',
+        fontSize: 30,
+        fontWeight: 'bold',
+        color: 'white',
+        textDecorationStyle: 'solid',
+        textShadowColor: 'black',
+        textShadowRadius: 5,
+        margin: 16
     },
-    header:{
-        
+    header: {
+
     }
 });
 

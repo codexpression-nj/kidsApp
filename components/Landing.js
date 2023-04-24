@@ -10,7 +10,7 @@ const Landing = ({ navigation }) => {
             <View style={styles.container}>
                 <Image style={styles.logo} source={require('../assets/logo.png')}/>
                 <TextInput style={styles.input} placeholder='username'></TextInput>
-                <TextInput style={styles.input} placeholder='password'></TextInput>
+                <TextInput style={styles.input} secureTextEntry={true} placeholder='password'></TextInput>
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => navigation.navigate('Menu')}
