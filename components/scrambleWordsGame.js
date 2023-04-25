@@ -69,7 +69,7 @@ const ScrambleWordsGame = ({navigation}) => {
                         <Image style={styles.image} source={image} />
                     </View>
 
-                    <Text style={styles.title}>Hi friend! I forgit my name, please help me remember it</Text>
+                    <Text style={styles.title}>Hi friend! I forgot my name, please help me remember it..</Text>
                     <View style={styles.wordContainer}>
                         <Text style={styles.word}>{question}</Text>
                     </View>
